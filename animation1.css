@@ -1,0 +1,36 @@
+.Drop::before{
+  display: none;
+  }
+.Drop:hover::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  height: 3px;
+  margin: 10px 10px;
+  background-color: #580A88;
+  -webkit-animation: lineAnim 1s linear infinite;
+  -moz-animation: lineAnim 1s linear infinite;
+  animation: lineAnim 1s linear infinite;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+@keyframes lineAnim {
+  0% {
+      
+      left: 0%;
+  }
+  50% {
+      left: 10%;
+      width: 4%;
+      right: -150%;
+      
+  }
+  100% {
+      left: 5%;
+      width: 10%;
+      right: 5%;
+      
+  }
+}
