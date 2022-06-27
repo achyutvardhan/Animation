@@ -4,44 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animation</title>
     <style>
 
         *{
             text-align: center;
+           
         }
-        h1{
+        a{
             margin-top: 200px;
    color: salmon;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
 }
 
-div{
+
+.ani{
     width: 100px;
     height: 5px;
     border-radius: 5px;
     position: relative;
-    background-color: red;
-    animation-name: line;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-animation-direction: normal;
-margin-left: 58%;
+    background-color: white;
+    
 }
 @keyframes line {
-    0% {right: 370px;}
-    10%{height: 100px;width: 5px; border-radius: 5px;top: 0px;bottom: 200px;}
-    
-    
-
-   
+    0%{left: 0px ; top: 0px;background-color: rgb(239, 86, 86);}
+    100%{left:360px;top: 0px;background-color: rgb(110, 239, 110);}
+}
+.option:hover .ani{
+    animation-name: line;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
     </style>
 </head>
 <body style="background-color:black ;">
-    <h1>animation for nav bar on hovering
-        
-    </h1>
-    <div></div>
+    <div style="width:fit-content; align-content: center;padding-left: 35%; position: relative;" class="option">
+    <a href="#"><h1>animation for nav bar on hovering</h1></a>
+ <div class="ani"></div>
+        </div>
+  
+    
 </body>
 </html>
